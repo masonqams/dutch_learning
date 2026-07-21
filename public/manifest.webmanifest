@@ -1,0 +1,19 @@
+{
+  "name": "Dutch Vocabulary Flashcards",
+  "short_name": "Dutch Cards",
+  "description": "CEFR-aligned Dutch vocabulary flashcards for English-speaking learners.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

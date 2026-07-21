@@ -47,3 +47,45 @@ assert.doesNotMatch(
 );
 assert.match(app, /Marked words/, "progress page should list marked words");
 console.log("flashcard and progress behavior checks passed");
+const manifest = readFileSync(
+  new URL("../public/manifest.webmanifest", import.meta.url),
+  "utf8",
+);
+const serviceWorker = readFileSync(
+  new URL("../public/service-worker.js", import.meta.url),
+  "utf8",
+);
+assert.match(
+  manifest,
+  /"display": "standalone"/,
+  "iPhone PWA should launch standalone",
+);
+assert.match(manifest, /"start_url": "\/"/, "PWA should start at the app root");
+assert.match(
+  serviceWorker,
+  /CACHE_NAME/,
+  "service worker should define an app cache",
+);
+const qrPage = readFileSync(
+  new URL("../public/iphone-install-qr.html", import.meta.url),
+  "utf8",
+);
+const qrScript = readFileSync(
+  new URL("../scripts/iphone-qr-url.mjs", import.meta.url),
+  "utf8",
+);
+assert.match(
+  qrPage,
+  /quickchart\.io\/qr/,
+  "QR page should render a scannable QR image",
+);
+assert.match(
+  qrPage,
+  /localhost/,
+  "QR page should warn against iPhone localhost usage",
+);
+assert.match(
+  qrScript,
+  /networkInterfaces/,
+  "QR script should discover local network URLs",
+);

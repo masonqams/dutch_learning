@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "test": "node tests/progress.test.mjs"
+    "test": "node tests/progress.test.mjs",
+    "iphone:qr": "node scripts/iphone-qr-url.mjs"
   },
   "dependencies": {
     "next": "latest",
@@ -16,13 +17,14 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "latest",
     "eslint": "latest",
     "prettier": "latest",
-    "tailwindcss": "latest",
+    "tailwindcss": "^3.4.17",
     "typescript": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20"
   }
 }

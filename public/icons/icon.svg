@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Dutch Cards app icon</title>
+  <desc id="desc">Indigo rounded square app icon with NL letters.</desc>
+  <rect width="512" height="512" rx="112" fill="#4f46e5" />
+  <rect x="64" y="64" width="384" height="384" rx="80" fill="#0f172a" />
+  <path d="M144 342V170h48l92 104V170h58v172h-48l-92-104v104h-58Z" fill="#fff" />
+  <path d="M352 342V170h58v122h70v50H352Z" fill="#c7d2fe" />
+</svg>
