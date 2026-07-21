@@ -1,18 +1,25 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   color-scheme: light;
 }
+
 .dark {
   color-scheme: dark;
 }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 button,
 select {
   cursor: pointer;
 }
+
 button:focus-visible,
 select:focus-visible {
   outline: 3px solid #818cf8;
